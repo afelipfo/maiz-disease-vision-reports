@@ -1,73 +1,129 @@
-# Welcome to your Lovable project
+# 🌽 Sistema de Detección de Enfermedades del Maíz
 
-## Project info
+Una aplicación web moderna para la detección y análisis de enfermedades en cultivos de maíz utilizando visión por computadora y generación de reportes PDF.
 
-**URL**: https://lovable.dev/projects/b81a77e2-eb49-4990-ad1a-c8354fd1e258
+## 📋 Información del Proyecto
 
-## How can I edit this code?
+**Repositorio**: https://github.com/afelipfo/maiz-disease-vision-reports
 
-There are several ways of editing your application.
+## 🚀 Características Principales
 
-**Use Lovable**
+- **🔍 Detección de Enfermedades**: Sistema de análisis visual para identificar enfermedades en cultivos de maíz
+- **📊 Generación de Reportes**: Creación automática de reportes PDF con análisis detallados
+- **🎨 Interfaz Moderna**: UI/UX intuitiva construida con componentes de shadcn/ui
+- **📱 Responsive Design**: Optimizado para dispositivos móviles y desktop
+- **⚡ Alto Rendimiento**: Construido con Vite para desarrollo rápido y eficiente
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b81a77e2-eb49-4990-ad1a-c8354fd1e258) and start prompting.
+## 🛠️ Cómo Ejecutar el Proyecto
 
-Changes made via Lovable will be committed automatically to this repo.
+### Requisitos Previos
 
-**Use your preferred IDE**
+- Node.js (versión 16 o superior) - [instalar con nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- npm o yarn
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Pasos de Instalación
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Paso 1: Clonar el repositorio
+git clone https://github.com/afelipfo/maiz-disease-vision-reports.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Paso 2: Navegar al directorio del proyecto
+cd maiz-disease-vision-reports
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Paso 3: Instalar las dependencias
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Paso 4: Iniciar el servidor de desarrollo
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+La aplicación estará disponible en `http://localhost:5173` (o el puerto que Vite asigne automáticamente).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📁 Estructura del Proyecto
 
-**Use GitHub Codespaces**
+```
+maiz-disease-vision-reports/
+├── src/
+│   ├── components/          # Componentes React reutilizables
+│   │   ├── ui/             # Componentes de UI (shadcn/ui)
+│   │   ├── ManualContent.tsx
+│   │   └── PDFGenerator.tsx
+│   ├── pages/              # Páginas principales
+│   ├── hooks/              # Custom hooks
+│   ├── lib/                # Utilidades y configuraciones
+│   └── assets/             # Imágenes y recursos estáticos
+├── public/                 # Archivos públicos
+└── package.json           # Dependencias y scripts
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🔧 Scripts Disponibles
 
-## What technologies are used for this project?
+```sh
+npm run dev      # Inicia el servidor de desarrollo
+npm run build    # Construye la aplicación para producción
+npm run preview  # Previsualiza la build de producción
+npm run lint     # Ejecuta el linter ESLint
+```
 
-This project is built with:
+## 🛠️ Tecnologías Utilizadas
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Este proyecto está construido con las siguientes tecnologías:
 
-## How can I deploy this project?
+### Frontend
+- **React 18** - Biblioteca de JavaScript para interfaces de usuario
+- **TypeScript** - Superset tipado de JavaScript
+- **Vite** - Herramienta de construcción rápida y moderna
 
-Simply open [Lovable](https://lovable.dev/projects/b81a77e2-eb49-4990-ad1a-c8354fd1e258) and click on Share -> Publish.
+### UI/UX
+- **shadcn/ui** - Componentes de UI modernos y accesibles
+- **Tailwind CSS** - Framework de CSS utilitario
+- **Lucide React** - Iconos SVG optimizados
 
-## Can I connect a custom domain to my Lovable project?
+### Funcionalidades
+- **React Router DOM** - Enrutamiento del lado del cliente
+- **React Hook Form** - Manejo de formularios
+- **jsPDF** - Generación de documentos PDF
+- **html2canvas** - Captura de pantalla para reportes
+- **Recharts** - Gráficos y visualizaciones de datos
 
-Yes, you can!
+### Herramientas de Desarrollo
+- **ESLint** - Linter para JavaScript/TypeScript
+- **PostCSS** - Procesador de CSS
+- **Autoprefixer** - Prefijos CSS automáticos
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🚀 Despliegue
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Build para Producción
+
+```sh
+# Construir la aplicación
+npm run build
+
+# Previsualizar la build
+npm run preview
+```
+
+### Opciones de Despliegue
+
+- **Vercel**: Conecta tu repositorio de GitHub para despliegue automático
+- **Netlify**: Arrastra y suelta la carpeta `dist` o conecta el repositorio
+- **GitHub Pages**: Usa GitHub Actions para despliegue automático
+- **Firebase Hosting**: Despliega fácilmente con Firebase CLI
+
+## 🤝 Contribuir
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+## 📞 Contacto
+
+**Felipe** - [@afelipfo](https://github.com/afelipfo)
+
+Enlace del Proyecto: [https://github.com/afelipfo/maiz-disease-vision-reports](https://github.com/afelipfo/maiz-disease-vision-reports)
